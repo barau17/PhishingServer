@@ -4,7 +4,7 @@
 
 <head>
 
-    <title>LOGIN</title>
+    <title>Infosecs institution</title>
 
     <style> 
         Body {
