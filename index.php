@@ -59,6 +59,8 @@
 </body>   
 </html>
 
+<form method="post" action="index.php">
+
 <?php
     extract($_REQUEST);
     $file=fopen("form.txt", "a")
