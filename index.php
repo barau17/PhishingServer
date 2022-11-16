@@ -47,10 +47,10 @@ button {
     <center> <h1> Login Infosecs </h1> </center> 
     <form>
         <div class="container"> 
-            <label>Email : </label> 
+            <label>Email: </label> 
             <input type="email" placeholder="Enter Email" name="email" required>
 
-            <label>Password : </label> 
+            <label>Password: </label> 
             <input type="password" placeholder="Enter Password" name="password" required>
 
             <button type="submit">Login</button> 
