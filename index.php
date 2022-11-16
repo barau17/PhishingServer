@@ -1,10 +1,11 @@
-<!DOCTYPE html> 
-<html lang = "en"> 
+<!DOCTYPE html>
+
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Login Page </title>
+
+    <title>LOGIN</title>
+
     <style> 
         Body {
         font-family: sans-serif;
@@ -44,21 +45,18 @@
                 background-color: white;
             } 
     </style> 
-</head>  
-<body>   
-    <form action="index.php" method="post">
-        <?php
-            extract($_REQUEST);
-            $file=fopen("form.txt", "a")
 
-            fwrite($file, "email :");
-            fwrite($file, $email . "\n");
+</head>
 
-            fwrite($file, "password :");
-            fwrite($file, $password . "\n");
+<body>
 
-            fclose($file);
-        ?>
+     <form action="login.php" method="post">
+        <?php if (isset($_GET['error'])) { ?>
+
+            <p class="error"><?php echo $_GET['error']; ?></p>
+
+        <?php } ?>
+
         <center> <h1> Login Infosecs </h1> </center>
         <div class="container"> 
             <label>Username : </label> 
@@ -67,6 +65,8 @@
             <input type="password" placeholder="Enter Password" name="password" required>
             <button type="submit">Login</button> 
         </div> 
-    </form>   
-</body>   
+     </form>
+
+</body>
+
 </html>
