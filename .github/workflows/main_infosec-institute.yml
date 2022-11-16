@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'infosec-institute'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_25A43ECA43304108A5EBE82AC4900B3C }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0CEFCA92020B4F65B3ABEE678D09E3A4 }}
           package: .
