@@ -49,16 +49,24 @@
 </head>
 
 <body>
-    <div class="container">
-        <form action="">
-            <center> <h1> Login Infosecs </h1> </center> 
+
+     <form action="login.php" method="post">
+        <?php if (isset($_GET['error'])) { ?>
+
+            <p class="error"><?php echo $_GET['error']; ?></p>
+
+        <?php } ?>
+
+        <center> <h1> Login Infosecs </h1> </center>
+        <div class="container"> 
             <label>Username : </label> 
-            <input type="email" placeholder="Enter Email" name="email" required>
+            <input type="text" placeholder="Enter Username" name="username" required>
             <label>Password : </label> 
             <input type="password" placeholder="Enter Password" name="password" required>
-            <button>Login</button>  
-        </form>
-    </div>
+            <button type="submit">Login</button> 
+        </div> 
+     </form>
 
 </body>
+
 </html>
